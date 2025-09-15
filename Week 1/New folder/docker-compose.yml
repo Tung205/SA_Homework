@@ -1,0 +1,12 @@
+version: '3'
+services:
+  ssh-server:
+    build: .
+    container_name: ubuntu-ssh
+    ports:
+      - "2222:22"   # Map SSH port ra ngoài
+      - "5901:5901"
+    volumes:
+      - ./data:/home/docker/data
+
+  
